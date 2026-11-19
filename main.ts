@@ -1,14 +1,15 @@
-// news-image-20261118 round 2 — "Wednesday 18 November 2026: The Day in World News"
+// news-image-20261118 rev2 — "Wednesday 18 November 2026: The Day in World News"
 // Program (Node 22, standard library only): copies the entry image to the
 // output directory. The image was built in-session for this revision: three
 // image-model lead illustrations composited into a serif newspaper front
-// page — 45 stories, 12 illustrated secondaries, a pinned world map, 30
-// one-line briefs, a source line and a date check. All facts first published
-// on Wednesday 18 November 2026.
-// Deterministic: a copy writes the same bytes on every run. Before copying,
-// the source is validated (must exist and be non-empty) and the copied file
-// is checked back against the source size, so a missing or truncated
-// entry.png fails loudly instead of producing a broken output.
+// page — 50 stories across 7 regions, a UTC timeline strip, source tags on
+// every lead and secondary, a pinned world map, 35 one-line briefs, a source
+// line and a date check. All facts first published on Wednesday
+// 18 November 2026.
+// Deterministic: a copy writes the same bytes on every run. The source is
+// checked before copying (must exist and be non-empty) and the copy is
+// checked back against the source size, so a missing or truncated entry.png
+// fails loudly instead of producing a broken output.
 //
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
